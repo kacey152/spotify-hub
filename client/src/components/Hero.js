@@ -1,18 +1,9 @@
 import React from "react";
 import { Container, Typography, Button, Box } from "@mui/material";
-// import backgroundImage from "../images/starrybackground3.jpg";
 
 const Home = () => {
   return (
-    <div
-      style={{
-        // background: `url(${backgroundImage}) center/cover no-repeat fixed`,
-        backgroundColor: '#141416' ,
-        height: "100vh",
-        color: '#f5f5f5',
-      }}
-    >
-      <Container sx={{ mx: "2em", pt: "10em" }}>
+      <Container sx={{ mx: "5em", pt: "10em", height: '100vh' }}>
         <Box sx={{ textAlign: "left" }}>
           <Typography variant="h1" >
             Unlock Your Beat
@@ -30,7 +21,6 @@ const Home = () => {
           </Button>
         </Box>
       </Container>
-    </div>
   );
 };
 
