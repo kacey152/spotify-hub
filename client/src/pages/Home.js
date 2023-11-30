@@ -9,7 +9,6 @@ const Home = () => {
     <div
       style={{
         background: `url(${backgroundImage}) center/cover no-repeat fixed`,
-        backgroundColor: '#141416' ,
         color: '#f5f5f5',
       }}
     >
