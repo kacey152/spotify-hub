@@ -3,7 +3,10 @@ import { Container, Typography, Button, Box, Slide, Grow } from "@mui/material";
 import { useInView } from "react-intersection-observer";
 
 const Home = () => {
-  const [ref, inView] = useInView({
+  const [ref, inView] = useInView({ //Reference for "Unlock your beat"
+    triggerOnce: false,
+  });
+  const [ref2, inView2] = useInView({ //Reference for tagline
     triggerOnce: false,
   });
   const [textWidth, setTextWidth] = useState(0);
@@ -18,34 +21,37 @@ const Home = () => {
   return (
     <Container sx={{ mx: "5em", pt: "10em", height: '100vh' }}>
       <Box sx={{ textAlign: "left", position: 'relative' }}>
-        <Typography variant="h1" sx={{ fontWeight: 'bold', display: 'inline' }} ref={textRef} >
-          Unlock Your Beat
-        </Typography>
         <Slide
           ref={ref}
           direction="right"
           in={inView}
-          timeout={500}
+          timeout={2000}
         >
-          <Box
-            sx={{
-              width: textWidth,
-              height: 3,
-              backgroundColor: '#f5f5f5',
-              position: 'absolute',
-              bottom: 0,
-              left: 0,
-              transformOrigin: 'bottom',
-            }}
-          />
+          <div>
+            <Typography variant="h1" sx={{ fontWeight: 'bold', display: 'inline' }} ref={textRef} >
+              Unlock Your Beat
+            </Typography>
+          </div>
         </Slide>
+        <Box
+          sx={{
+            height: '3px',
+            width: inView ? textWidth : '0%', // Grow width based on inView
+            backgroundColor: '#f5f5f5',
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            transition: 'width 2s ease-out', // CSS transition for smooth growth
+            transformOrigin: 'left bottom',
+          }}
+        />
       </Box>
       <Box sx={{ textAlign: "left" }}>
         <Slide
-          ref={ref}
-          direction="right"
-          in={inView}
-          timeout={500}
+          ref={ref2}
+          direction="left"
+          in={inView2}
+          timeout={2000}
         >
           <Typography variant="h2" sx={{ my: "1em" }}>
             Your Personalized Music Analytics Hub
