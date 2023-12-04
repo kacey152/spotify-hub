@@ -2,6 +2,7 @@ import React from 'react'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import backgroundImage from "../images/starrybackground.jpg";
+import Instructions from '../components/Instructions';
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     >
         <Hero />
         <About />
+        <Instructions />
     </div>
   )
 }
