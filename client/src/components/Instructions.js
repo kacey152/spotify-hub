@@ -3,8 +3,7 @@ import React from 'react'
 
 const Instructions = () => {
     return (
-        <Container sx={{ height: '100vh' }}>
-            <Box sx={{ pt: '15em', px: '4em' }}>
+        <Container sx={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
                 <Grid
                     container
                     spacing={1}
@@ -12,9 +11,9 @@ const Instructions = () => {
                     justifyContent="center"
                     alignItems="center"
                     wrap="wrap"
-                    sx={{ textAlign: 'left' }}
+                    sx={{ textAlign: 'left', py:'4em', px: '4em', backgroundColor: '#111111', border: '2px solid #373b40'}}
                 >
-                    <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+                    <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center'}}>
                         <Box>
                             <Typography variant="h4">
                                 How It Works
@@ -44,14 +43,12 @@ const Instructions = () => {
                                     Collaborate and Share
                                 </Typography>
                                 <Typography variant="h5">
-                                     Connect with friends, create collaborative playlists, and share your music journey.
+                                    Connect with friends, create collaborative playlists, and share your music journey.
                                 </Typography>
                             </Grid>
                         </Grid>
                     </Grid>
                 </Grid>
-
-            </Box>
         </Container>
 
     )
