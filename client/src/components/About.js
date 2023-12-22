@@ -7,7 +7,7 @@ import LibraryMusicOutlinedIcon from "@mui/icons-material/LibraryMusicOutlined";
 
 const About = () => {
   return (
-      <Container sx={{height: '100vh', display: 'flex', alignItems: 'center'}}>
+      <Container id='about' sx={{height: '100vh', display: 'flex', alignItems: 'center'}}>
         <Box sx= {{py: '4em', px: '4em', backgroundColor: '#111111', border: '2px solid #373b40'}} >
           <Grid container spacing={4} sx={{ textAlign: "left" }}>
             <Grid item xs={4}>

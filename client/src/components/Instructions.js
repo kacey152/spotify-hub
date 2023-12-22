@@ -3,7 +3,7 @@ import React from 'react'
 
 const Instructions = () => {
     return (
-        <Container sx={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
+        <Container id='overview' sx={{ height: '100vh', display: 'flex', alignItems: 'center' }}>
                 <Grid
                     container
                     spacing={1}

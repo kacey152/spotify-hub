@@ -19,7 +19,7 @@ const Home = () => {
   }, [inView]);
 
   return (
-    <Container sx={{  pt: "10em", height: '100vh' }}>
+    <Container id='hero' sx={{  pt: "10em", height: '100vh' }}>
       <Box sx={{ textAlign: "left", position: 'relative' }}>
         <Slide
           ref={ref}
