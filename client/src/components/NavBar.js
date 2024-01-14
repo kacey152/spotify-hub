@@ -29,41 +29,41 @@ const NavBar = () => {
   const handleCloseAnalyticsMenu = () => {
     setAnchorElAnalytics(null);
   };
-  
+
   return (
     <div>
       <AppBar position="fixed" color="inherit">
         <Toolbar sx={{ justifyContent: 'space-between' }}>
-          <HashLink to="/" elementId="hero" smooth style={{textDecoration: 'none', color: 'inherit'}}>
+          <HashLink to="/" elementId="hero" smooth style={{ textDecoration: 'none', color: 'inherit' }}>
             <Typography variant="h6">Spotify Hub</Typography>
           </HashLink>
-          <Box sx={{display: 'flex'}}>
-            <HashLink to="/" elementId="about" smooth style={{textDecoration: 'none', color: 'inherit'}}>
+          <Box sx={{ display: 'flex' }}>
+            <HashLink to="/" elementId="about" smooth style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography
                 variant="h6"
-                sx={{ cursor: "pointer", mx: [1,2,3]}} //Responsive horizontal margin
+                sx={{ cursor: "pointer", mx: [1, 2, 3] }} //Responsive horizontal margin
               >
                 About
               </Typography>
             </HashLink>
-            <HashLink to="/" elementId="overview" smooth style={{textDecoration: 'none', color: 'inherit'}}>
+            <HashLink to="/" elementId="overview" smooth style={{ textDecoration: 'none', color: 'inherit' }}>
               <Typography
                 variant="h6"
-                sx={{ cursor: "pointer", mx: [1,2,3]}} //Responsive horizontal margin
+                sx={{ cursor: "pointer", mx: [1, 2, 3] }} //Responsive horizontal margin
               >
                 Overview
               </Typography>
             </HashLink>
             <Typography
               variant="h6"
-              sx={{ cursor: "pointer", mx: [1,2,3]}} //Responsive horizontal margin
+              sx={{ cursor: "pointer", mx: [1, 2, 3] }} //Responsive horizontal margin
               onClick={handleOpenAnalyticsMenu}
             >
               Analytics
             </Typography>
             <Typography
               variant="h6"
-              sx={{ cursor: "pointer", mx: [1,2,3]}} //Responsive horizontal margin
+              sx={{ cursor: "pointer", mx: [1, 2, 3] }} //Responsive horizontal margin
             >
               Log In
             </Typography>
@@ -75,7 +75,11 @@ const NavBar = () => {
             open={Boolean(anchorElAnalytics)}
             onClose={handleCloseAnalyticsMenu}
           >
-            <MenuItem onClick={handleCloseAnalyticsMenu}>Top Tracks</MenuItem>
+            <MenuItem onClick={handleCloseAnalyticsMenu}>
+              <HashLink to="/analytics" smooth elementId="musicalMilestones" style={{ textDecoration: 'none', color: 'inherit' }}>
+                Top Tracks
+              </HashLink>
+            </MenuItem>
             <MenuItem onClick={handleCloseAnalyticsMenu}>Timeline</MenuItem>
             <MenuItem onClick={handleCloseAnalyticsMenu}>Recommendations</MenuItem>
           </Menu>
